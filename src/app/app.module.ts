@@ -7,6 +7,7 @@ import {SharedModule} from "./shared/shared.module";
 import {CoreModule} from "./core/core.module";
 import {HomeModule} from "./home/home.module";
 import {PartialsModule} from "./partials/partials.module";
+import {ProductsModule} from "./products/products.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {PartialsModule} from "./partials/partials.module";
     CoreModule,
     SharedModule,
     PartialsModule,
-    HomeModule
+    HomeModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
