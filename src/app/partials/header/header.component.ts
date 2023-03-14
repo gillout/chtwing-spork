@@ -10,7 +10,6 @@ export class HeaderComponent {
   title = 'Chtwing Spork';
 
   constructor(
-    private router: Router
   ) {}
 
 }

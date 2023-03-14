@@ -8,6 +8,7 @@ import {CoreModule} from "./core/core.module";
 import {HomeModule} from "./home/home.module";
 import {PartialsModule} from "./partials/partials.module";
 import {ProductsModule} from "./products/products.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {ProductsModule} from "./products/products.module";
     SharedModule,
     PartialsModule,
     HomeModule,
-    ProductsModule
+    ProductsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

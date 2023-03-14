@@ -9,6 +9,7 @@ header {
 }
 
 h1 {
+  padding-bottom: 4px;
   letter-spacing: 5px;
 }
 
@@ -18,14 +19,13 @@ ul {
   align-items: center;
   margin: 0;
   padding: 0 10px;
-  min-width: 700px;
+  min-width: 800px;
   height: 100%;
 }
 
-//li {
-//  margin-left: 10px;
-//  margin-right: 10px;
-//}
+a {
+  color: white;
+}
 
 div {
   display: flex;

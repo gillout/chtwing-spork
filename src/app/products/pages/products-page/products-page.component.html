@@ -2,6 +2,17 @@
 
   <h1>{{ title }}</h1>
 
-  <p>Affichage des produits en vente</p>
+  <div class="articles">
+
+    <article *ngFor="let product of products">
+
+      <img src="{{ product.image }}" alt="{{ product.title }}">
+      <p class="title">{{ product.title }}</p>
+      <p>{{ product.rating.rate }}</p>
+      <p>{{ product.price }}</p>
+
+    </article>
+
+  </div>
 
 </section>
