@@ -15,8 +15,6 @@ export class ProductsService {
   ) { }
 
   getAll(): Observable<Product[]> {
-    const allProds = this.httpClient.get<Product[]>(`${this.API_URL}/products`);
-    console.log(allProds);
-    return allProds;
+    return this.httpClient.get<Product[]>(`${this.API_URL}/products`);
   }
 }
