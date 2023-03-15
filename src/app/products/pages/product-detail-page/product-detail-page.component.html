@@ -1,6 +1,6 @@
 <section>
 
-  <ng-container *ngIf="product">
+  <div *ngIf="product; else noProduct">
     <h1>{{ product.title }}</h1>
 
     <article>
@@ -10,7 +10,7 @@
       </div>
 
       <div class="infos">
-        <p class="price_rate">
+        <p class="price-rate">
           <span class="price">{{ product.price }} €</span>
           <span class="rate">{{ product.rating.rate }}</span>
         </p>
@@ -18,10 +18,10 @@
       </div>
 
     </article>
-  </ng-container>
+  </div>
 
-  <p *ngIf="!product">{{ message }}</p>
+  <ng-template #noProduct><h1>Pas de produit trouvé !</h1></ng-template>
 
-  <button class="btn btn-info" [routerLink]="['/products']">Retour</button>
+  <button class="btn btn-outline-dark" [routerLink]="['/products']">Retour</button>
 
 </section>

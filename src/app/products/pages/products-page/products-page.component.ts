@@ -25,7 +25,4 @@ export class ProductsPageComponent implements OnInit {
     );
   }
 
-  navigateToProduct(id: number) {
-    this.router.navigate([`/products/${id}`]);
-  }
 }

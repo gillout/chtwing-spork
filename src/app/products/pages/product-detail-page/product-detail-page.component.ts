@@ -4,14 +4,13 @@ import {ActivatedRoute, convertToParamMap} from "@angular/router";
 import {Product} from "../../models/product";
 
 @Component({
-  selector: 'app-product-page',
-  templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.scss']
+  selector: 'app-product-detail-page',
+  templateUrl: './product-detail-page.component.html',
+  styleUrls: ['./product-detail-page.component.scss']
 })
-export class ProductPageComponent implements OnInit {
+export class ProductDetailPageComponent implements OnInit {
 
   product?: Product;
-  message?: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,14 +25,10 @@ export class ProductPageComponent implements OnInit {
         this.productsService.getById(+id).subscribe(
           product => {
             this.product = product;
-            console.log(product.title);
           }
         );
       }
     });
-    if (!this.product) {
-      this.message = 'Pas de produit trouvé';
-    }
   }
 
 }
