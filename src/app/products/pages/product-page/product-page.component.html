@@ -1,0 +1,27 @@
+<section>
+
+  <ng-container *ngIf="product">
+    <h1>{{ product.title }}</h1>
+
+    <article>
+
+      <div class="picture">
+        <img src="{{ product.image }}" alt="{{ product.title }}">
+      </div>
+
+      <div class="infos">
+        <p class="price_rate">
+          <span class="price">{{ product.price }} €</span>
+          <span class="rate">{{ product.rating.rate }}</span>
+        </p>
+        <p class="description">{{ product.description }}</p>
+      </div>
+
+    </article>
+  </ng-container>
+
+  <p *ngIf="!product">{{ message }}</p>
+
+  <button class="btn btn-info" [routerLink]="['/products']">Retour</button>
+
+</section>
