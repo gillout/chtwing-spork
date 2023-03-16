@@ -1,0 +1,27 @@
+<section>
+
+  <div *ngIf="product; else productNotFound">
+    <h1>{{ product.title }}</h1>
+
+    <article>
+
+      <div class="picture">
+        <img src="{{ product.image }}" alt="{{ product.title }}">
+      </div>
+
+      <div class="infos">
+        <p class="price-rate">
+          <span class="price">{{ product.price }} €</span>
+          <span class="rate">{{ product.rating.rate }}</span>
+        </p>
+        <p class="description">{{ product.description }}</p>
+      </div>
+
+    </article>
+  </div>
+
+  <ng-template #productNotFound><h1>Pas de produit trouvé !</h1></ng-template>
+
+  <button class="btn btn-outline-dark" [routerLink]="['/products']">Retour</button>
+
+</section>
