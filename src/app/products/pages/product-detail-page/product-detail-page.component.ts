@@ -23,9 +23,7 @@ export class ProductDetailPageComponent implements OnInit {
       const id = params.get('id') as string;
       if (id) {
         this.productsService.getById(+id).subscribe(
-          product => {
-            this.product = product;
-          }
+          product => this.product = product
         );
       }
     });

@@ -1,6 +1,6 @@
 <section>
 
-  <div *ngIf="product; else noProduct">
+  <div *ngIf="product; else productNotFound">
     <h1>{{ product.title }}</h1>
 
     <article>
@@ -20,7 +20,7 @@
     </article>
   </div>
 
-  <ng-template #noProduct><h1>Pas de produit trouvé !</h1></ng-template>
+  <ng-template #productNotFound><h1>Pas de produit trouvé !</h1></ng-template>
 
   <button class="btn btn-outline-dark" [routerLink]="['/products']">Retour</button>
 

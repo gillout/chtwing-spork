@@ -6,7 +6,7 @@
 
     <article *ngFor="let product of products">
 
-      <a [routerLink]="['/products', product.id]"><img src="{{ product.image }}" alt="{{ product.title }}"></a>
+      <a [routerLink]="['/products', product.id]"><img [src]="product.image" [alt]="product.title"></a>
       <p class="title">{{ product.title }}</p>
       <p>{{ product.rating.rate }}</p>
       <p>{{ product.price }} €</p>
