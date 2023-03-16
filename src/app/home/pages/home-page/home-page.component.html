@@ -2,6 +2,19 @@
 
   <h1>{{ title }}</h1>
 
-  <p>Choisissez une catégorie de produits ou tous les produits</p>
+  <!--
+  <div class="articles">
+
+    <article *ngFor="let product of products">
+
+      <a [routerLink]="['/products', product.id]"><img [src]="product.image" [alt]="product.title"></a>
+      <p class="title">{{ product.title }}</p>
+      <p>{{ product.rating.rate }}</p>
+      <p>{{ product.price }} €</p>
+
+    </article>
+
+  </div>
+  -->
 
 </section>

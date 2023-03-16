@@ -14,8 +14,7 @@ export class ProductListPageComponent implements OnInit {
   products: Product[] = [];
 
   constructor(
-    private productsService: ProductsService,
-    private router: Router
+    private productsService: ProductsService
   ) {
   }
 
