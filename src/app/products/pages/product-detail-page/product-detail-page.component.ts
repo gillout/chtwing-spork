@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../../services/products.service";
-import {ActivatedRoute, convertToParamMap} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {Product} from "../../models/product";
 
 @Component({
@@ -11,6 +11,7 @@ import {Product} from "../../models/product";
 export class ProductDetailPageComponent implements OnInit {
 
   product?: Product;
+  starVal = 4;
 
   constructor(
     private activatedRoute: ActivatedRoute,
