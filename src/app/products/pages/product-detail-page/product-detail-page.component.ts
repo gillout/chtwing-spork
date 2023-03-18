@@ -11,7 +11,6 @@ import {Product} from "../../models/product";
 export class ProductDetailPageComponent implements OnInit {
 
   product?: Product;
-  starVal = 4;
 
   constructor(
     private activatedRoute: ActivatedRoute,
