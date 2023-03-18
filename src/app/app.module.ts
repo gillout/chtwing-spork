@@ -11,8 +11,6 @@ import {ProductsModule} from "./products/products.module";
 import {HttpClientModule} from "@angular/common/http";
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ButtonModule} from "primeng/button";
-import {RatingModule} from "primeng/rating";
 
 @NgModule({
   declarations: [
