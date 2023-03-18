@@ -7,11 +7,13 @@ import {ProductDetailPageComponent} from './pages/product-detail-page/product-de
 import {FormsModule} from "@angular/forms";
 import {RatingModule} from "primeng/rating";
 import {MessageModule} from "primeng/message";
+import { BestsellersPageComponent } from './pages/bestsellers-page/bestsellers-page.component';
 
 @NgModule({
   declarations: [
     ProductListPageComponent,
-    ProductDetailPageComponent
+    ProductDetailPageComponent,
+    BestsellersPageComponent
   ],
   imports: [
     CommonModule,
