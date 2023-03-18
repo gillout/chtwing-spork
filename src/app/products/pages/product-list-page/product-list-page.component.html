@@ -8,7 +8,7 @@
 
       <a [routerLink]="['/products', product.id]"><img [src]="product.image" [alt]="product.title"></a>
       <p class="title">{{ product.title }}</p>
-      <p>{{ product.rating.rate }}</p>
+      <p-rating [ngModel]=product.rating.rate [stars]="5" [readonly]="true" [cancel]="false"></p-rating>
       <p>{{ product.price }} €</p>
 
     </article>

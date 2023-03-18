@@ -10,14 +10,18 @@ import {ProductsService} from "../../../products/services/products.service";
 export class HomePageComponent implements OnInit {
 
   title = 'Bienvenue';
+  limit = 10;
   products: Product[] = [];
 
   constructor(
-    private productsService: ProductsService,
+    private productsService: ProductsService
   ) {
   }
 
   ngOnInit() {
+    this.productsService.getWithLimit(this.limit).subscribe(
+      products => this.products = products
+    );
   }
 
 }

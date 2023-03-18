@@ -11,8 +11,8 @@
 
       <div class="infos">
         <p class="price-rate">
-          <span class="price">{{ product.price }} €</span>
-          <span class="rate">{{ product.rating.rate }}</span>
+          <span class="price">{{ product.price }}€</span>
+          <p-rating [ngModel]=product.rating.rate [stars]="5" [readonly]="true" [cancel]="false"></p-rating>
         </p>
         <p class="description">{{ product.description }}</p>
       </div>
@@ -20,7 +20,9 @@
     </article>
   </div>
 
-  <ng-template #productNotFound><h1>Pas de produit trouvé !</h1></ng-template>
+  <ng-template #productNotFound>
+    <p-message severity="warn" text="Pas de produit trouvé."></p-message>
+  </ng-template>
 
   <button class="btn btn-outline-dark" [routerLink]="['/products']">Retour</button>
 
