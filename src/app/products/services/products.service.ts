@@ -27,8 +27,8 @@ export class ProductsService {
   }
 
   getBestsellers(count: number): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(`${this.API_URL}/products`)
-      .pipe(map(products => products.filter(product => product.rating.count >= count)
+    return this.getAll().pipe(map(products => products
+      .filter(product => product.rating.count >= count)
     ));
   }
 }
