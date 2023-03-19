@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Product} from "../models/product";
-import {Observable} from "rxjs";
+import {filter, map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +24,11 @@ export class ProductsService {
 
   getWithLimit(limit: number): Observable<Product[]> {
     return this.httpClient.get<Product[]>(`${this.API_URL}/products?limit=${limit}`);
+  }
+
+  getBestsellers(count: number): Observable<Product[]> {
+    return this.getAll().pipe(map(products => products
+      .filter(product => product.rating.count >= count)
+    ));
   }
 }
